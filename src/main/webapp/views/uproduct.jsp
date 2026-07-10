@@ -44,10 +44,9 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
+	<div class="container-fluid mt-3">
 
-
-		<table class="table">
+		<table class="table table-striped table-hover align-middle shadow-sm">
 
 			<tr>
 				<th scope="col">Serial No.</th>
@@ -80,12 +79,13 @@
                     					</td>
 
                     					<td><img src="${product.image}"
-                    						height="100px" width="100px"></td>
+                    						height="100px" width="100px" class="rounded shadow-sm"
+                    						style="object-fit: cover;"></td>
                     					<td>
                     						${product.quantity }
                     					</td>
-                    					<td>S
-                    						${product.price }
+                    					<td><span class="badge badge-success">$
+                    						${product.price }</span>
                     					</td>
                     					<td>
                     						${product.weight }
@@ -95,12 +95,12 @@
                     					</td>
 
 
-					<td>
+					<td class="text-center">
 
 
 				    <form action="products/addtocart" method="get">
 							<input type="hidden" name="id" value="${product.id}">
-							<input type="submit" value="Add To Cart" class="btn btn-warning">
+							<input type="submit" value="Add To Cart" class="btn btn-warning btn-sm">
 					</form>
 					</td>
 
